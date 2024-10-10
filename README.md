@@ -83,7 +83,9 @@ Apprentissages importants:
 - Envoyer des commandes de contrôle au robot
 
 Voir: https://www.youtube.com/watch?v=k4FQ-dZ0Lp8
+
 Instructions: https://github.com/f1tenth/f1tenth_lab2_template
+
 Solution (en ROS avec Python): https://github.com/vaul-ulaval/emergency_braking_node/blob/dev/ttc-speed-projection/scripts/safety_node.py
 
 ### 2ème laboratoire: Suivi de murs
@@ -93,5 +95,7 @@ Apprentissages importants:
 - Objectif de contrôle (Suivre le mur à une distance de `d` mètres)
 
 Voir: https://www.youtube.com/watch?v=qIpiqhO3ITY
+
 Instructions: https://github.com/f1tenth/f1tenth_lab3_template
+
 Solution (en ROS avec C++): https://github.com/vaul-ulaval/wall_following_node/blob/main/src/wall_follow_node.cpp 
