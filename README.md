@@ -29,17 +29,19 @@ Avant de commencer à travailler sur un vrai robot, nous allons commencer par in
 1. Télécharger le simulateur pour votre système d'exploitation: https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator
 2. Une fois téléchargé, vous devriez avoir un fichier exécutable. Simplement à le double-cliquer pour lancer le simulateur. (Si vous êtes sous Linux, vous allez devoir ajouter la permission d'exécution)
 
+*Si vous avez une erreur concernant Microsoft Visual C++ en ouvrant le simulateur, télécharger [ceci](https://visualstudio.microsoft.com/visual-cpp-build-tools/.)*
+
 Une fois ouvert, je vous recommande de jouer un peu avec le simulateur pour explorer les différents menus/options disponibles. Ce sera pratique pour le développement plus tard
 
-### Installation du devkit
+### Utilisation du devkit
 
-Afin de pouvoir écrire des algorithmes pour contrôler le véhicule, on devra télécharger le devkit afin de pouvoir lancer un serveur qui recevra les données du simulateur et qui enverra les commandes autonomes à effectuer.
+Afin de pouvoir écrire des algorithmes pour contrôler le véhicule, on devra utiliser le devkit afin de pouvoir lancer un serveur qui recevra les données du simulateur et qui enverra les commandes autonomes à effectuer.
 
 1. Ouvrir le répertoire suivant en ligne de commande et faire:
 ```bash
 cd labs
 ```
-2. Installer les dépendences Python en fonction de votre version de Python
+2. Installer les dépendences Python
 ```bash
 pip3 install -r requirements.txt
 ```
@@ -53,7 +55,7 @@ python example.py # Le script devrait s'exécuter sans erreurs
 Ouvrir le code du script [example.py](./labs/example.py) et analyser un peu ce qui se passe. On remarque que vers la fin du script, on envoie une commande de `throttle` et de `steering` de `1.0`, ce qui signifie de tourner le volant à gauche au max et de donner toute la puissance moteur disponible. Testons ces hypothèses avec le simulateur!
 
 1. Démarrer le simulateur (Le fichier exécutable démarrer précédemment)
-2. Démarrer le serveur de commandes `example.py`
+2. Démarrer le serveur de commandes [example.py](./labs/example.py)
 ```bash
 python example.py
 ```
@@ -68,7 +70,11 @@ Bravo! Vous avez exécuté votre premier algorithme de contrôle en simulation! 
 
 Les différents [laboratoires F1tenth](https://www.youtube.com/watch?v=v6w_zVHL8WQ&list=PL7rtKJAz_mPdFDJtufKmqfWRNu55s_LMc) explorent bien les bases de la conduite autonome. Dans les différentes vidéos/solutions, on discute de ROS, mais il est possible de réaliser tous ces laboratoires sans ROS avec le simulateur installé précédemment.
 
-Certaines solutions des laboratoires sont fournis dans ce répertoire. Cependant, on vous recommande fortement de faire les exercices sans regarder la solution d'abord.
+Pour réaliser ces laboratoires, vous pouvez dupliquer le fichier [example.py](./labs/example.py) et programmer dedans. Ensuite, vous pourrez simplement suivre les mêmes étapes qu'auparavant pour exécuter votre code, simplement à changer le nom du fichier python à exécuter.
+
+Pour avoir accès aux informations provenant des capteurs du f1tenth, regardez le code dans [autodrive.py](./labs/autodrive.py). On peut y voir toutes les informations qui sont disponibles. Par exemple, `lidar_range_array` correspond au scan de lidar.
+
+Certaines solutions des laboratoires sont fournis, cependant, on vous recommande fortement de faire les exercices sans regarder la solution d'abord.
 
 ### 1er laboratoire: Système de frein d'urgence
 
