@@ -41,15 +41,20 @@ Une fois ouvert, je vous recommande de jouer un peu avec le simulateur pour expl
 
 Afin de pouvoir écrire des algorithmes pour contrôler le véhicule, on devra utiliser le devkit afin de pouvoir lancer un serveur qui recevra les données du simulateur et qui enverra les commandes autonomes à effectuer.
 
-1. Ouvrir le répertoire suivant en ligne de commande et faire:
+1. Si ce n'est pas déjà fait, cloner le répertoire suivant:
+```bash
+git clone https://github.com/vaul-ulaval/f1tenth-tutorials.git
+cd f1tenth-tutorials
+```
+2. Se déplacer dans le dossier des labs
 ```bash
 cd labs
 ```
-2. Installer les dépendences Python
+3. Installer les dépendences Python
 ```bash
 pip3 install -r requirements.txt
 ```
-3. Exécuter le script python afin de lancer le serveur de commandes:
+4. Exécuter le script python afin de lancer le serveur de commandes:
 ```bash
 python example.py # Le script devrait s'exécuter sans erreurs
 ```
