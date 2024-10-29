@@ -7,7 +7,7 @@ Le but du repo suivant sera de vous initier à la robotique avec le projet F1ten
 ### Pré-requis
 
 - Git
-- Python >=3.8
+- Python 3.10
 
 
 ## Projet F1tenth
@@ -27,7 +27,7 @@ Avant de commencer à travailler sur un vrai robot, nous allons commencer par in
 ### Installation du simulateur
 
 1. Télécharger le simulateur pour votre système d'exploitation: https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator
-2. Une fois téléchargé, vous devriez avoir un fichier exécutable. Simplement à le double-cliquer pour lancer le simulateur
+2. Une fois téléchargé, vous devriez avoir un fichier exécutable. Simplement à le double-cliquer pour lancer le simulateur. (Si vous êtes sous Linux, vous allez devoir ajouter la permission d'exécution)
 
 Une fois ouvert, je vous recommande de jouer un peu avec le simulateur pour explorer les différents menus/options disponibles. Ce sera pratique pour le développement plus tard
 
@@ -35,31 +35,27 @@ Une fois ouvert, je vous recommande de jouer un peu avec le simulateur pour expl
 
 Afin de pouvoir écrire des algorithmes pour contrôler le véhicule, on devra télécharger le devkit afin de pouvoir lancer un serveur qui recevra les données du simulateur et qui enverra les commandes autonomes à effectuer.
 
-1. Cloner le répertoire suivant avec la commande suivante:
+1. Ouvrir le répertoire suivant en ligne de commande et faire:
 ```bash
-git clone --single-branch --branch AutoDRIVE-Devkit https://github.com/Tinker-Twins/AutoDRIVE.git
+cd labs
 ```
-2. Le répertoire contient différents exemples pour plusieurs languages de programmation, nous allons utiliser Python.
+2. Installer les dépendences Python en fonction de votre version de Python
 ```bash
-cd 'AutoDRIVE/ADSS Toolkit/autodrive_py'
+pip3 install -r requirements.txt
 ```
-3. Installer les dépendences Python en fonction de votre version de Python
+3. Exécuter le script python afin de lancer le serveur de commandes:
 ```bash
-pip3 install -r requirements_python_3.10.txt # Remplacer 3.10 par votre version de Python
-```
-4. Exécuter le script python afin de lancer le serveur de commandes:
-```bash
-python example_f1tenth.py # Le script devrait s'exécuter sans erreurs
+python example.py # Le script devrait s'exécuter sans erreurs
 ```
 
 ### Exécution d'un premier algorithme
 
-Ouvrir le code du script `example_f1tenth.py` et analyser un peu ce qui se passe. On remarque que vers la fin du script, on envoie une commande de `throttle` et de `steering` de `1`, ce qui signifie de tourner le volant à gauche au max et de donner toute la puissance moteur disponible. Testons ces hypothèses avec le simulateur!
+Ouvrir le code du script [example.py](./labs/example.py) et analyser un peu ce qui se passe. On remarque que vers la fin du script, on envoie une commande de `throttle` et de `steering` de `1.0`, ce qui signifie de tourner le volant à gauche au max et de donner toute la puissance moteur disponible. Testons ces hypothèses avec le simulateur!
 
-1. Démarrer le simulateur
-2. Démarrer le serveur de commandes `example_f1tenth.py`
+1. Démarrer le simulateur (Le fichier exécutable démarrer précédemment)
+2. Démarrer le serveur de commandes `example.py`
 ```bash
-python example_f1tenth.py
+python example.py
 ```
 3. Dans l'interface du simulateur, cliquer sur le bouton `Connect` afin de se connecter au serveur de commande. Normalement l'interface devrait afficher `Connected`
 4. Ensuite, changer le mode de conduite de `Manual` à `Autonomous`.

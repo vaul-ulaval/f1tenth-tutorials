@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-import math
-import time
-
 import autodrive
 import eventlet
 import numpy as np
@@ -16,29 +13,12 @@ VERBOSE_OUTPUT = False
 LIDAR_FOV_DEGREE = 270
 MAX_SPEED = 4.92 # m/s
 
-# Lab constants
-TTC_THRESOLD = 1.0 # s
-
 
 # Vehicle and server init
 f1tenth = autodrive.F1TENTH()
 f1tenth.id = 'V1'
 sio = socketio.Server()
 app = Flask(__name__)
-
-
-def angle_to_distance(theta_rad: float, lidar_array: list[float]):
-    angle_min = math.radians(-LIDAR_FOV_DEGREE/2.0)
-    angle_increment = math.radians(LIDAR_FOV_DEGREE/len(lidar_array))
-
-    index = int((theta_rad-angle_min)/angle_increment)
-    distance = lidar_array[index]
-
-    return distance
-
-
-def is_valid_lidar_scan(scan: float) -> bool:
-    return not math.isinf(scan) and not math.isnan(scan)
 
 
 def send_control_command(throttle: float, steering: float):
@@ -67,20 +47,8 @@ def bridge(sid, data):
 
     f1tenth.parse_data(data, verbose=VERBOSE_OUTPUT)
 
-    throttle = 0.2 # [0.0, 1.0]
-    steering = 0.0 # [0.0, 1.0]
-
-    speed = throttle * MAX_SPEED
-    forward_distance = angle_to_distance(theta_rad=0, lidar_array=f1tenth.lidar_range_array)
-
-    if not is_valid_lidar_scan(forward_distance):
-        send_control_command(throttle, steering)
-        return
-
-    ttc = forward_distance/speed
-    if ttc < TTC_THRESOLD:
-        print("Sending brake command")
-        throttle = 0.0
+    throttle = 1.0 # [0.0, 1.0]
+    steering = 1.0 # [0.0, 1.0]
 
     send_control_command(throttle, steering)
 
