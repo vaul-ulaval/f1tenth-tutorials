@@ -72,7 +72,7 @@ Bravo! Vous avez exécuté votre premier algorithme de contrôle en simulation! 
 
 Les différents laboratoires F1tenth explore bien les bases de la conduite autonome. Dans les différentes vidéos/solutions, on discute de ROS, mais il est possible de réaliser tous ces laboratoires sans ROS avec le simulateur installé précédemment.
 
-Les solutions des laboratoires sont en ROS, mais vous pouvez quand même analyser le code et avoir une idée de quoi faire
+Les solutions des laboratoires sont fournis dans ce répertoire. Cependant, on vous recommande fortement de faire les exercices sans regarder la solution d'abord.
 
 ### 1er laboratoire: Système de frein d'urgence
 
@@ -82,11 +82,11 @@ Apprentissages importants:
 - Récupérer un scan Lidar à un angle donné
 - Envoyer des commandes de contrôle au robot
 
-Voir: https://www.youtube.com/watch?v=k4FQ-dZ0Lp8
+[Vidéo explicative](https://www.youtube.com/watch?v=k4FQ-dZ0Lp8)
 
-Instructions: https://github.com/f1tenth/f1tenth_lab2_template
+[Instructions](https://github.com/f1tenth/f1tenth_lab2_template)
 
-Solution (en ROS avec Python): https://github.com/vaul-ulaval/emergency_braking_node/blob/dev/ttc-speed-projection/scripts/safety_node.py
+[Solution](./solutions-labs/emergency_braking.py)
 
 ### 2ème laboratoire: Suivi de murs
 
@@ -94,8 +94,8 @@ Apprentissages importants:
 - Contrôle PID
 - Objectif de contrôle (Suivre le mur à une distance de `d` mètres)
 
-Voir: https://www.youtube.com/watch?v=qIpiqhO3ITY
+[Vidéo explicative](https://www.youtube.com/watch?v=qIpiqhO3ITY)
 
-Instructions: https://github.com/f1tenth/f1tenth_lab3_template
+[Instructions](https://github.com/f1tenth/f1tenth_lab3_template)
 
-Solution (en ROS avec C++): https://github.com/vaul-ulaval/wall_following_node/blob/main/src/wall_follow_node.cpp 
+[Solution](./solutions-labs/wall_follow.py)
