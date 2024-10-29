@@ -79,8 +79,8 @@ def bridge(sid, data):
     if not data:
         return
 
-    steering = 0.0 # [0.0, 1.0]
-    throttle = 0.3 # [0.0, 1.0]
+    steering = 0.0 # [-1.0, 1.0]
+    throttle = 0.3 # [-1.0, 1.0]
 
     f1tenth.parse_data(data, verbose=VERBOSE_OUTPUT)
 

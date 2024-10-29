@@ -47,8 +47,8 @@ def bridge(sid, data):
 
     f1tenth.parse_data(data, verbose=VERBOSE_OUTPUT)
 
-    throttle = 1.0 # [0.0, 1.0]
-    steering = 1.0 # [0.0, 1.0]
+    throttle = 1.0 # [-1.0, 1.0]
+    steering = 1.0 # [-1.0, 1.0]
 
     send_control_command(throttle, steering)
 

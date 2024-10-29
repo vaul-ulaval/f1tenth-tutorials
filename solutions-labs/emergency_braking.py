@@ -67,8 +67,8 @@ def bridge(sid, data):
 
     f1tenth.parse_data(data, verbose=VERBOSE_OUTPUT)
 
-    throttle = 0.2 # [0.0, 1.0]
-    steering = 0.0 # [0.0, 1.0]
+    throttle = 0.2 # [-1.0, 1.0]
+    steering = 0.0 # [-1.0, 1.0]
 
     speed = throttle * MAX_SPEED
     forward_distance = angle_to_distance(theta_rad=0, lidar_array=f1tenth.lidar_range_array)
