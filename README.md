@@ -29,9 +29,13 @@ Avant de commencer à travailler sur un vrai robot, nous allons commencer par in
 1. Télécharger le simulateur pour votre système d'exploitation: https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator
 2. Une fois téléchargé, vous devriez avoir un fichier exécutable. Simplement à le double-cliquer pour lancer le simulateur. (Si vous êtes sous Linux, vous allez devoir ajouter la permission d'exécution)
 
-*Si vous avez une erreur concernant Microsoft Visual C++ en ouvrant le simulateur, télécharger [ceci](https://visualstudio.microsoft.com/visual-cpp-build-tools/.)*
-
 Une fois ouvert, je vous recommande de jouer un peu avec le simulateur pour explorer les différents menus/options disponibles. Ce sera pratique pour le développement plus tard
+
+#### Problèmes possibles
+
+- Si vous avez une erreur concernant Microsoft Visual C++ en ouvrant le simulateur, télécharger [ceci](https://visualstudio.microsoft.com/visual-cpp-build-tools/.)
+- Si vous avez une carte graphique AMD ou Intel et que l'exécution du simulateur cause un crash, essayer d'exécuter l'application sur vos graphiques intégrés (Voir [ici](https://www.intel.com/content/www/us/en/support/articles/000090168/graphics.html))
+
 
 ### Utilisation du devkit
 
