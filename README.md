@@ -70,9 +70,9 @@ Bravo! Vous avez exécuté votre premier algorithme de contrôle en simulation! 
 
 ## Laboratoires F1tenth
 
-Les différents laboratoires F1tenth explore bien les bases de la conduite autonome. Dans les différentes vidéos/solutions, on discute de ROS, mais il est possible de réaliser tous ces laboratoires sans ROS avec le simulateur installé précédemment.
+Les différents [laboratoires F1tenth](https://www.youtube.com/watch?v=v6w_zVHL8WQ&list=PL7rtKJAz_mPdFDJtufKmqfWRNu55s_LMc) explorent bien les bases de la conduite autonome. Dans les différentes vidéos/solutions, on discute de ROS, mais il est possible de réaliser tous ces laboratoires sans ROS avec le simulateur installé précédemment.
 
-Les solutions des laboratoires sont fournis dans ce répertoire. Cependant, on vous recommande fortement de faire les exercices sans regarder la solution d'abord.
+Certaines solutions des laboratoires sont fournis dans ce répertoire. Cependant, on vous recommande fortement de faire les exercices sans regarder la solution d'abord.
 
 ### 1er laboratoire: Système de frein d'urgence
 
@@ -82,7 +82,7 @@ Apprentissages importants:
 - Récupérer un scan Lidar à un angle donné
 - Envoyer des commandes de contrôle au robot
 
-[Vidéo explicative](https://www.youtube.com/watch?v=k4FQ-dZ0Lp8)
+[Vidéo explicative](https://www.youtube.com/watch?v=k4FQ-dZ0Lp8&list=PL7rtKJAz_mPdFDJtufKmqfWRNu55s_LMc&index=3)
 
 [Instructions](https://github.com/f1tenth/f1tenth_lab2_template)
 
@@ -94,8 +94,44 @@ Apprentissages importants:
 - Contrôle PID
 - Objectif de contrôle (Suivre le mur à une distance de `d` mètres)
 
-[Vidéo explicative](https://www.youtube.com/watch?v=qIpiqhO3ITY)
+[Vidéo explicative](https://www.youtube.com/watch?v=qIpiqhO3ITY&list=PL7rtKJAz_mPdFDJtufKmqfWRNu55s_LMc&index=6)
 
 [Instructions](https://github.com/f1tenth/f1tenth_lab3_template)
 
 [Solution](./solutions-labs/wall_follow.py)
+
+### 3ème laboratoire: Suivi de trou
+
+Apprentissages importants:
+- Algorithme réactif
+- Évitement d'obstacle de base
+
+[Vidéo explicative](https://www.youtube.com/watch?v=5asfD-_Z9x8&list=PL7rtKJAz_mPdFDJtufKmqfWRNu55s_LMc&index=7)
+
+[Instructions](https://github.com/f1tenth/f1tenth_lab4_template)
+
+[Solution (Avec ROS)](https://github.com/vaul-ulaval/gap_following/blob/dev/scripts/gap_following_node.py)
+
+## Introduction à Robot Operating System (ROS)
+
+Avant de développer des algorithmes plus complexes, il sera nécessaire d'apprendre les bases de ROS. ROS est un middleware s'installant sur Ubuntu permettant de distribuer un système robotique en plusieurs parties. Celui-ci fourni également plusieurs outils indispensable pour le déboguage comme Rviz ou l'enregistrement de rosbags.
+
+**ROS est très important à apprendre puisque c'est ce qui est utilisé sur chacun de nos robots**
+
+### Séminaire d'introduction
+
+Pour s'introduire à ROS, si ce n'est pas déjà fait, vous pouvez consulter le [séminaire d'introduction](https://www.youtube.com/watch?v=vAb5SnaJbF0&list=PL125ARjD2GAQM5pfGsJEozWxafsucLw1G&index=4).
+
+### Installation de ROS dans une machine virtuelle
+
+Avec la connaissance de base de ROS, passons maintenant à l'action. Afin de comprendre comment installer ROS et l'utiliser, on vous suggère de vous créer une machine virtuelle avec Ubuntu 22:
+
+1. Télécharger [VirtualBox](https://www.virtualbox.org/)
+2. Télécharger le fichier .ISO d'[Ubuntu 22 desktop](https://releases.ubuntu.com/jammy/)
+3. Suivre les [étapes suivantes](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview) pour installer votre machine virtuelle
+
+Une fois la machine virtuelle fonctionnelle, installer ROS2 humble sur celle-ci en suivant la [page d'installation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
+
+### Tutoriels ROS
+
+Afin d'avoir une expérience hands-on, on vous suggère maintenant de suivre les [tutoriels officiels suivants](https://docs.ros.org/en/humble/Tutorials.html) afin de jouer avec cette nouvelle installation de ROS.
